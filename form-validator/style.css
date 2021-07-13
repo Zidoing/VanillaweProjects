@@ -34,6 +34,7 @@ h2 {
 .form-control {
     margin-bottom: 10px;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .form-control label {
@@ -56,6 +57,27 @@ h2 {
     border-color: #777;
 }
 
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
 .form button {
     cursor: pointer;
     background-color: #3498db;
@@ -64,7 +86,7 @@ h2 {
     color: #fff;
     font-size: 16px;
     padding: 10px;
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     width: 100%;
     display: block;
 }
